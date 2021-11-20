@@ -1,0 +1,22 @@
+:root {
+    --text-color: #333;
+    --white-color: #fff;
+    --black-color: #000000;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white-color);
+}
