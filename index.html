@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <script src="home.js"></script>
     <title>Vuighe.clone</title>
 </head>
 
@@ -504,7 +503,7 @@
                                     <div class="line"></div>
                                 </div>
                             </div>
-                            <div class="navbar__user-body login active">
+                            <div class="navbar__user-body active">
                                 <div class="navbar__form-group">
                                     <label>Tên đăng nhập</label>
                                     <input type="text" name="username" class="navbar__form-group--input">
@@ -545,7 +544,15 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="navbar__user-body sign-up"></div>
+                            <div class="navbar__user-body">
+                                <div class="navbar__form-group">
+                                    <label>Tên đăng nhập</label>
+                                    <input type="text" name="username" class="navbar__form-group--input">
+                                    <i class="navbar__form-group--icon material-icons-outlined">
+                                                perm_identity
+                                                </i>
+                                </div>
+                            </div>
                             <div class="navbar__close">
                                 <i class="material-icons-outlined">
                                             close
@@ -559,6 +566,7 @@
         </div>
         </div>
     </header>
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>
