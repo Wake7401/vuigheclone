@@ -11,9 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <title>Vuighe.clone</title>
 </head>
@@ -469,7 +475,7 @@
                         </div>
                     </div>
                     <div class="navbar__search ">
-                        <div class="navbar__search-box ">
+                        <div class="navbar__search-box " id="showsearch">
                             <input type="text " name="search-box " placeholder="Tìm kiếm anime " autocomplete="off " class="navbar__search-input ">
                             <i class="navbar__icon-search material-icons-outlined ">
                                     search
@@ -481,7 +487,9 @@
                             <i class="navbar__header-user--icon material-icons-outlined ">light_mode</i>
                         </div>
                         <div class="navbar__user" id="showmenu">
-                            <i class="navbar__header-user--icon material-icons-outlined ">person </i>
+                            <span class="navbar__header-user--icon material-icons-sharp">
+                                person
+                                </span>
                         </div>
                         <div class="navbar__overlay" id="overlay"></div>
                         <div class="navbar__right" id="navbar-right">
@@ -498,23 +506,22 @@
                                     <div class="navbar__tab-item navbar__tab-signup">
                                         Đăng kí
                                     </div>
-                                    <div class="line"></div>
                                 </div>
                             </div>
                             <div class="navbar__user-body active">
                                 <div class="navbar__form-group">
                                     <label>Tên đăng nhập</label>
                                     <input type="text" name="username" class="navbar__form-group--input">
-                                    <i class="navbar__form-group--icon material-icons-outlined">
-                                                        perm_identity
-                                                        </i>
+                                    <span class="navbar__form-group--icon material-icons-sharp">
+                                        person
+                                        </span>
                                 </div>
                                 <div class="navbar__form-group">
                                     <label>Mật khẩu</label>
-                                    <input type="text" name="password" class="navbar__form-group--input">
-                                    <i class="navbar__form-group--icon material-icons-outlined">
-                                                        lock
-                                                        </i>
+                                    <input type="password" name="password" class="navbar__form-group--input">
+                                    <span class="navbar__form-group--icon material-icons-sharp">
+                                        lock
+                                        </span>
                                 </div>
                                 <div class="navbar__form-group">
                                     <label for="" class="navbar__form-checkbox">
@@ -546,9 +553,68 @@
                                 <div class="navbar__form-group">
                                     <label>Tên đăng nhập</label>
                                     <input type="text" name="username" class="navbar__form-group--input">
-                                    <i class="navbar__form-group--icon material-icons-outlined">
-                                                        perm_identity
-                                                        </i>
+                                    <span class="navbar__form-group--icon material-icons-sharp">
+                                        person
+                                        </span>
+                                </div>
+                                <div class="navbar__form-group">
+                                    <label>Mật khẩu</label>
+                                    <input type="password" name="password" class="navbar__form-group--input">
+                                    <span class="navbar__form-group--icon material-icons-sharp">
+                                        lock
+                                        </span>
+                                </div>
+                                <div class="navbar__form-group">
+                                    <label>Nhập lại mật khẩu</label>
+                                    <input type="password" name="password" class="navbar__form-group--input">
+                                    <span class="navbar__form-group--icon material-icons-sharp">
+                                        lock
+                                        </span>
+                                </div>
+                                <div class="navbar__form-group">
+                                    <label>Tên hiển thị</label>
+                                    <input type="text" name="password" class="navbar__form-group--input">
+                                    <span class="navbar__form-group--icon material-icons-sharp">
+                                        question_answer
+                                        </span>
+                                </div>
+
+                                <div class="navbar__form-group">
+                                    <label>Email</label>
+                                    <input type="text" name="password" class="navbar__form-group--input">
+                                    <i class="navbar__form-group--icon fas fa-at"></i>
+                                </div>
+                                <div class="navbar__form-group">
+                                    <label for="">Giới tính</label>
+                                    <label for="" class="navbar__radio-box">
+                                        <input type="radio" name="gender" value="1" checked>
+                                        <span>Nam</span>
+                                    </label>
+
+                                    <label for="" class="navbar__radio-box">
+                                        <input type="radio" name="gender" value="0" checked>
+                                        <span>Nữ</span>
+                                    </label>
+                                </div>
+
+                                <div class="navbar__form-group">
+                                    <div class="navbar__birthday navbar__form-day">
+                                        <label for="">Ngày sinh</label>
+                                        <input type="number" name="birthday" min="1" max="31">
+                                    </div>
+
+                                    <div class="navbar__birthday navbar__form-month">
+                                        <label for="">Tháng sinh</label>
+                                        <input type="number" name="month" min="1" max="12">
+                                    </div>
+
+                                    <div class="navbar__birthday navbar__form-year">
+                                        <label for="">Năm sinh</label>
+                                        <input type="number" name="year" min="1970" max="2010">
+                                    </div>
+                                    <div class="navbar__form-group">
+                                        <input type="button" name="submit" class="navbar__login navbar__form-group--input" value="Đăng Kí">
+                                    </div>
                                 </div>
                             </div>
                             <div class="navbar__close" id="hidden">

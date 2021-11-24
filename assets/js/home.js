@@ -28,14 +28,24 @@ const overlay = $('#overlay')
 openMenu.addEventListener("click", function() {
     sidemenu.classList.add("active");
     overlay.classList.add("active");
+    overlay.style.display = "block";
 
 })
 
 hiddenMenu.addEventListener('click', function() {
     sidemenu.classList.remove("active");
-    overlay.classList.remove("active");
+    overlay.style.display = "none";
 })
 
 overlay.addEventListener('click', function() {
-    overlay.closest('.overlay')
+    sidemenu.classList.remove("active");
+    overlay.style.display = "none";
+})
+
+// Ẩn hiện search 
+const openSearch = $('#showsearch')
+const seachresult = $('#seachresult')
+
+openSearch.addEventListener('click', function() {
+    seachresult.classList.add("active");
 })
