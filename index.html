@@ -480,13 +480,11 @@
                         <div class="navbar__convert ">
                             <i class="navbar__header-user--icon material-icons-outlined ">light_mode</i>
                         </div>
-                        <label for="nav__menu-person" class="navbar__user">
+                        <div class="navbar__user" id="showmenu">
                             <i class="navbar__header-user--icon material-icons-outlined ">person </i>
-
-                            <input type="checkbox" hidden name="" class="nav__input" id="nav__menu-person">
-
-                            <label for="nav__menu-person" class="navbar__overlay"></label>
-                        <div class="navbar__right">
+                        </div>
+                        <div class="navbar__overlay" id="overlay"></div>
+                        <div class="navbar__right" id="navbar-right">
                             <div class="navbar__right-header">
                                 <div class="navbar__user-avatar">
                                 </div>
@@ -508,24 +506,24 @@
                                     <label>Tên đăng nhập</label>
                                     <input type="text" name="username" class="navbar__form-group--input">
                                     <i class="navbar__form-group--icon material-icons-outlined">
-                                                perm_identity
-                                                </i>
+                                                        perm_identity
+                                                        </i>
                                 </div>
                                 <div class="navbar__form-group">
                                     <label>Mật khẩu</label>
                                     <input type="text" name="password" class="navbar__form-group--input">
                                     <i class="navbar__form-group--icon material-icons-outlined">
-                                                lock
-                                                </i>
+                                                        lock
+                                                        </i>
                                 </div>
                                 <div class="navbar__form-group">
                                     <label for="" class="navbar__form-checkbox">
-                                                <input type="checkbox" name="remembar" checked>
-                                                <span>Ghi nhớ</span>
-                                            </label>
+                                                        <input type="checkbox" name="remembar" checked>
+                                                        <span>Ghi nhớ</span>
+                                                    </label>
                                     <a href="" class="navbar__fogot-password">
-                                                Quên mật khẩu
-                                            </a>
+                                                        Quên mật khẩu
+                                                    </a>
                                 </div>
                                 <div class="navbar__form-group">
                                     <input type="button" name="submit" class="navbar__login navbar__form-group--input" value="Đăng Nhập">
@@ -549,17 +547,16 @@
                                     <label>Tên đăng nhập</label>
                                     <input type="text" name="username" class="navbar__form-group--input">
                                     <i class="navbar__form-group--icon material-icons-outlined">
-                                                perm_identity
-                                                </i>
+                                                        perm_identity
+                                                        </i>
                                 </div>
                             </div>
-                            <div class="navbar__close">
+                            <div class="navbar__close" id="hidden">
                                 <i class="material-icons-outlined">
-                                            close
-                                         </i>
+                                                    close
+                                                </i>
                             </div>
                         </div>
-                        </label>
                     </div>
                 </div>
             </div>

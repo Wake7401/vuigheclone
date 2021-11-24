@@ -217,19 +217,26 @@
     display: none;
 }
 
+.navbar__overlay.active {
+    display: block;
+}
+
 .navbar__right {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     bottom: 0;
     z-index: 100;
     width: 300px;
     max-width: 100%;
     box-shadow: 0 0 10px #999;
     background-color: var(--white-color);
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform linear 0.2s;
+    transition: 850ms;
+}
+
+.navbar__right.active {
+    right: 0;
+    transition: 350ms;
 }
 
 .navbar__right-header {
@@ -433,13 +440,4 @@ hr {
     left: 10px;
     color: var(--black-color);
     cursor: pointer;
-}
-
-.nav__input:checked~.navbar__overlay {
-    display: block;
-}
-
-.nav__input:checked~.navbar__right {
-    opacity: 1;
-    transform: translateY(0%);
 }
