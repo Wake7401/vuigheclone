@@ -41,11 +41,3 @@ overlay.addEventListener('click', function() {
     sidemenu.classList.remove("active");
     overlay.style.display = "none";
 })
-
-// Ẩn hiện search 
-const openSearch = $('#showsearch')
-const seachresult = $('#seachresult')
-
-openSearch.addEventListener('click', function() {
-    seachresult.classList.add("active");
-})
