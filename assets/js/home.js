@@ -41,3 +41,18 @@ overlay.addEventListener('click', function() {
     sidemenu.classList.remove("active");
     overlay.style.display = "none";
 })
+
+// Ẩn hiện search
+
+const showSearch = $('#showSearch')
+const searchResult = $('#searchResult')
+
+showSearch.addEventListener('click', function() {
+    searchResult.classList.add("active");
+    overlay.classList.add("active");
+    overlay.style.display = "block";
+})
+overlay.addEventListener('click', function() {
+    searchResult.classList.remove("active");
+    overlay.style.display = "none";
+})

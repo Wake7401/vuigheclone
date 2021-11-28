@@ -27,3 +27,27 @@ a {
     text-decoration: none;
     color: var(--text-color);
 }
+
+.background-1 {
+    background: linear-gradient( -180deg, rgba(244, 67, 54, .9), rgba(244, 67, 54, .2));
+}
+
+.background-2 {
+    background: linear-gradient( -180deg, rgba(156, 39, 176, .9), rgba(156, 39, 176, .2));
+}
+
+.background-3 {
+    background: linear-gradient( -180deg, rgba(63, 81, 181, .9), rgba(63, 81, 181, .2));
+}
+
+.background-4 {
+    background: linear-gradient( -180deg, rgba(0, 150, 136, .9), rgba(0, 150, 136, .2));
+}
+
+.background-5 {
+    background: linear-gradient( -180deg, rgba(255, 193, 7, .9), rgba(255, 193, 7, .2));
+}
+
+.background-6 {
+    background: linear-gradient( -180deg, rgba(140, 106, 73, .9), rgba(140, 106, 73, .2));
+}

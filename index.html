@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -474,154 +475,158 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navbar__search ">
-                        <div class="navbar__search-box " id="showsearch">
-                            <input type="text " name="search-box " placeholder="Tìm kiếm anime " autocomplete="off " class="navbar__search-input ">
-                            <i class="navbar__icon-search material-icons-outlined ">
-                                    search
-                                    </i>
-                        </div>
+                </div>
+                <div class="navbar__search ">
+                    <div class="navbar__search-box" id="showSearch">
+                        <input type="text " name="search-box " placeholder="Tìm kiếm anime " autocomplete="off " class="navbar__search-input ">
+                        <i class="navbar__icon-search material-icons-outlined ">
+                                search
+                                </i>
                     </div>
-                    <div class="navbar__header-user ">
-                        <div class="navbar__convert ">
-                            <i class="navbar__header-user--icon material-icons-outlined ">light_mode</i>
+                    <div class="navbar__search-result" id="searchResult">
+                        <div class="overlay"></div>
+                        <div class="navbar__search-result--item">Nhập để tìm kiếm</div>
+                    </div>
+                </div>
+                <div class="navbar__header-user ">
+                    <div class="navbar__convert ">
+                        <i class="navbar__header-user--icon material-icons-outlined ">light_mode</i>
+                    </div>
+                    <div class="navbar__user" id="showmenu">
+                        <span class="navbar__header-user--icon material-icons-sharp">
+                            person
+                            </span>
+                    </div>
+                    <div class="navbar__overlay" id="overlay"></div>
+                    <div class="navbar__right" id="navbar-right">
+                        <div class="navbar__right-header">
+                            <div class="navbar__user-avatar">
+                            </div>
+                            <div class="navbar__welcome">
+                                <span>Chào khách!</span>
+                            </div>
+                            <div class="navbar__tab">
+                                <div class="navbar__tab-item navbar__tab-login active">
+                                    Đăng nhập
+                                </div>
+                                <div class="navbar__tab-item navbar__tab-signup">
+                                    Đăng kí
+                                </div>
+                            </div>
                         </div>
-                        <div class="navbar__user" id="showmenu">
-                            <span class="navbar__header-user--icon material-icons-sharp">
-                                person
-                                </span>
+                        <div class="navbar__user-body active">
+                            <div class="navbar__form-group">
+                                <label>Tên đăng nhập</label>
+                                <input type="text" name="username" class="navbar__form-group--input">
+                                <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
+                                    person
+                                    </span>
+                            </div>
+                            <div class="navbar__form-group">
+                                <label>Mật khẩu</label>
+                                <input type="password" name="password" class="navbar__form-group--input">
+                                <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
+                                    lock
+                                    </span>
+                            </div>
+                            <div class="navbar__form-group">
+                                <label for="" class="navbar__form-checkbox">
+                                                    <input type="checkbox" name="remembar" checked>
+                                                    <span>Ghi nhớ</span>
+                                                </label>
+                                <a href="" class="navbar__fogot-password">
+                                                    Quên mật khẩu
+                                                </a>
+                            </div>
+                            <div class="navbar__form-group">
+                                <input type="button" name="submit" class="navbar__login navbar__form-group--input" value="Đăng Nhập">
+                            </div>
+                            <hr>
+                            <div class="navbar__form-group">
+                                <a href="" class="facebook-login">
+                                    <input type="button" name="facebook" class="navbar__facebook navbar__form-group--input" value="Đăng nhập với Facebook">
+                                    <i class="navbar__form-group--icon fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="navbar__form-group">
+                                <a href="" class="google-login">
+                                    <input type="button" name="google" class="navbar__google navbar__form-group--input" value="Đăng nhập với Google">
+                                    <i class="navbar__form-group--icon fab fa-google"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="navbar__overlay" id="overlay"></div>
-                        <div class="navbar__right" id="navbar-right">
-                            <div class="navbar__right-header">
-                                <div class="navbar__user-avatar">
+                        <div class="navbar__user-body">
+                            <div class="navbar__form-group">
+                                <label>Tên đăng nhập</label>
+                                <input type="text" name="username" class="navbar__form-group--input">
+                                <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
+                                    person
+                                    </span>
+                            </div>
+                            <div class="navbar__form-group">
+                                <label>Mật khẩu</label>
+                                <input type="password" name="password" class="navbar__form-group--input">
+                                <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
+                                    lock
+                                    </span>
+                            </div>
+                            <div class="navbar__form-group">
+                                <label>Nhập lại mật khẩu</label>
+                                <input type="password" name="password" class="navbar__form-group--input">
+                                <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
+                                    lock
+                                    </span>
+                            </div>
+                            <div class="navbar__form-group">
+                                <label>Tên hiển thị</label>
+                                <input type="text" name="password" class="navbar__form-group--input">
+                                <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
+                                    question_answer
+                                    </span>
+                            </div>
+
+                            <div class="navbar__form-group">
+                                <label>Email</label>
+                                <input type="text" name="password" class="navbar__form-group--input">
+                                <i class="navbar__form-group--icon fas fa-at"></i>
+                            </div>
+                            <div class="navbar__form-group">
+                                <label for="">Giới tính</label>
+                                <label for="" class="navbar__radio-box">
+                                    <input type="radio" name="gender" value="1" checked>
+                                    <span>Nam</span>
+                                </label>
+
+                                <label for="" class="navbar__radio-box">
+                                    <input type="radio" name="gender" value="0" checked>
+                                    <span>Nữ</span>
+                                </label>
+                            </div>
+
+                            <div class="navbar__form-group">
+                                <div class="navbar__birthday navbar__form-day">
+                                    <label for="">Ngày sinh</label>
+                                    <input type="number" name="birthday" min="1" max="31">
                                 </div>
-                                <div class="navbar__welcome">
-                                    <span>Chào khách!</span>
+
+                                <div class="navbar__birthday navbar__form-month">
+                                    <label for="">Tháng sinh</label>
+                                    <input type="number" name="month" min="1" max="12">
                                 </div>
-                                <div class="navbar__tab">
-                                    <div class="navbar__tab-item navbar__tab-login active">
-                                        Đăng nhập
-                                    </div>
-                                    <div class="navbar__tab-item navbar__tab-signup">
-                                        Đăng kí
-                                    </div>
+
+                                <div class="navbar__birthday navbar__form-year">
+                                    <label for="">Năm sinh</label>
+                                    <input type="number" name="year" min="1970" max="2010">
+                                </div>
+                                <div class="navbar__form-group">
+                                    <input type="button" name="submit" class="navbar__login navbar__form-group--input" value="Đăng Kí">
                                 </div>
                             </div>
-                            <div class="navbar__user-body active">
-                                <div class="navbar__form-group">
-                                    <label>Tên đăng nhập</label>
-                                    <input type="text" name="username" class="navbar__form-group--input">
-                                    <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
-                                        person
-                                        </span>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <label>Mật khẩu</label>
-                                    <input type="password" name="password" class="navbar__form-group--input">
-                                    <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
-                                        lock
-                                        </span>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <label for="" class="navbar__form-checkbox">
-                                                        <input type="checkbox" name="remembar" checked>
-                                                        <span>Ghi nhớ</span>
-                                                    </label>
-                                    <a href="" class="navbar__fogot-password">
-                                                        Quên mật khẩu
-                                                    </a>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <input type="button" name="submit" class="navbar__login navbar__form-group--input" value="Đăng Nhập">
-                                </div>
-                                <hr>
-                                <div class="navbar__form-group">
-                                    <a href="" class="facebook-login">
-                                        <input type="button" name="facebook" class="navbar__facebook navbar__form-group--input" value="Đăng nhập với Facebook">
-                                        <i class="navbar__form-group--icon fab fa-facebook-f"></i>
-                                    </a>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <a href="" class="google-login">
-                                        <input type="button" name="google" class="navbar__google navbar__form-group--input" value="Đăng nhập với Google">
-                                        <i class="navbar__form-group--icon fab fa-google"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="navbar__user-body">
-                                <div class="navbar__form-group">
-                                    <label>Tên đăng nhập</label>
-                                    <input type="text" name="username" class="navbar__form-group--input">
-                                    <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
-                                        person
-                                        </span>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <label>Mật khẩu</label>
-                                    <input type="password" name="password" class="navbar__form-group--input">
-                                    <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
-                                        lock
-                                        </span>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <label>Nhập lại mật khẩu</label>
-                                    <input type="password" name="password" class="navbar__form-group--input">
-                                    <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
-                                        lock
-                                        </span>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <label>Tên hiển thị</label>
-                                    <input type="text" name="password" class="navbar__form-group--input">
-                                    <span class="navbar__form-group--icon material-icons-sharp" style="font-size:16px">
-                                        question_answer
-                                        </span>
-                                </div>
-
-                                <div class="navbar__form-group">
-                                    <label>Email</label>
-                                    <input type="text" name="password" class="navbar__form-group--input">
-                                    <i class="navbar__form-group--icon fas fa-at"></i>
-                                </div>
-                                <div class="navbar__form-group">
-                                    <label for="">Giới tính</label>
-                                    <label for="" class="navbar__radio-box">
-                                        <input type="radio" name="gender" value="1" checked>
-                                        <span>Nam</span>
-                                    </label>
-
-                                    <label for="" class="navbar__radio-box">
-                                        <input type="radio" name="gender" value="0" checked>
-                                        <span>Nữ</span>
-                                    </label>
-                                </div>
-
-                                <div class="navbar__form-group">
-                                    <div class="navbar__birthday navbar__form-day">
-                                        <label for="">Ngày sinh</label>
-                                        <input type="number" name="birthday" min="1" max="31">
-                                    </div>
-
-                                    <div class="navbar__birthday navbar__form-month">
-                                        <label for="">Tháng sinh</label>
-                                        <input type="number" name="month" min="1" max="12">
-                                    </div>
-
-                                    <div class="navbar__birthday navbar__form-year">
-                                        <label for="">Năm sinh</label>
-                                        <input type="number" name="year" min="1970" max="2010">
-                                    </div>
-                                    <div class="navbar__form-group">
-                                        <input type="button" name="submit" class="navbar__login navbar__form-group--input" value="Đăng Kí">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="navbar__close" id="hidden">
-                                <i class="material-icons-outlined">
-                                                    close
-                                                </i>
-                            </div>
+                        </div>
+                        <div class="navbar__close" id="hidden">
+                            <i class="material-icons-outlined">
+                                                close
+                                            </i>
                         </div>
                     </div>
                 </div>
@@ -1517,8 +1522,343 @@
                     </a>
                 </div>
             </div>
+            <div class="ranking__item background-2">
+                <a href="">
+                    <div class="ranking__item-thumbnail">
+                        <img src="	https://s199.imacdn.com/vg/2021/05/13/e3c93e9e3ae4c4d1_9a3a2fe806b4ffc6_3775516209096674118684.jpg"></div>
+                    <div class="ranking__item-top">2</div>
+                </a>
+                <div class="ranking__item-meta">
+                    <a href="">
+                        <div class="ranking__item-title">Boruto: Naruto Next Generations</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ranking__item background-3">
+                <a href="">
+                    <div class="ranking__item-thumbnail">
+                        <img src="https://s199.imacdn.com/vg/2019/07/26/6c040a27770ec024_ded1b5147578648e_5019215641124505185710.jpg"></div>
+                    <div class="ranking__item-top">3</div>
+                </a>
+                <div class="ranking__item-meta">
+                    <a href="">
+                        <div class="ranking__item-title">Conan The Movie</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ranking__item background-4">
+                <a href="">
+                    <div class="ranking__item-thumbnail">
+                        <img src="https://s199.imacdn.com/vg/2021/10/09/6905539bf9042220_da24a413e600b40a_3229016337240972118684.jpg"></div>
+                    <div class="ranking__item-top">4</div>
+                </a>
+                <div class="ranking__item-meta">
+                    <a href="">
+                        <div class="ranking__item-title">Komi-san wa, Comyushou desu.</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ranking__item background-5">
+                <a href="">
+                    <div class="ranking__item-thumbnail">
+                        <img src="	https://s199.imacdn.com/vg/2021/10/15/7037f1f6780cfcfe_be51a99d6de0214b_5319816342414797118684.jpg"></div>
+                    <div class="ranking__item-top">5</div>
+                </a>
+                <div class="ranking__item-meta">
+                    <a href="">
+                        <div class="ranking__item-title">Ousama Ranking</div>
+                    </a>
+                </div>
+            </div>
+            <div class="ranking__item background-6">
+                <a href="">
+                    <div class="ranking__item-thumbnail">
+                        <img src="	https://s199.imacdn.com/vg/2021/10/09/0cc38cc7b23b976d_76495a64d15a5e1b_5527916337239585118684.jpg"></div>
+                    <div class="ranking__item-top">6</div>
+                </a>
+                <div class="ranking__item-meta">
+                    <a href="">
+                        <div class="ranking__item-title">Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni Shimashita</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="tray all">
+            <div class="tray__title">
+                <a href="">
+                    <h1>Tất cả anime</h1>
+                    <i class="tray__title-icon material-icons-outlined" style="font-size: 28px">
+                        chevron_right
+                    </i>
+                </a>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/11/25/9804ff507acbeaf2_1a3746430cf6d7e5_3740416378257066118684.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Super Crooks
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">4,106 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">13 / 13 tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+            </div>
+
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/dc641920cf91ab3f_bc8ea4b22379a70d_57887163498219899674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Shikkakumon no Saikyou Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">10,369 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/9bd617e0f3d1da76_6df3c05b0522faf7_61053163498187089674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Kenja no Deshi wo Nanoru Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">3,705 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/9bd617e0f3d1da76_6df3c05b0522faf7_61053163498187089674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Kenja no Deshi wo Nanoru Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">3,705 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/e732209657deb21a_8d92c61467f96f5f_56481163498149369674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Tensai Ouji no Akaji Kokka Saisei Jutsu
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">8,307 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/11/25/9804ff507acbeaf2_1a3746430cf6d7e5_3740416378257066118684.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Super Crooks
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">4,106 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">13 / 13 tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+            </div>
+
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/dc641920cf91ab3f_bc8ea4b22379a70d_57887163498219899674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Shikkakumon no Saikyou Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">10,369 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/9bd617e0f3d1da76_6df3c05b0522faf7_61053163498187089674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Kenja no Deshi wo Nanoru Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">3,705 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/9bd617e0f3d1da76_6df3c05b0522faf7_61053163498187089674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Kenja no Deshi wo Nanoru Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">3,705 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/e732209657deb21a_8d92c61467f96f5f_56481163498149369674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Tensai Ouji no Akaji Kokka Saisei Jutsu
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">8,307 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/9bd617e0f3d1da76_6df3c05b0522faf7_61053163498187089674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Kenja no Deshi wo Nanoru Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">3,705 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <div class="tray__item">
+                <a href="">
+                    <img class="tray__item-img" src="https://s199.imacdn.com/vg/2021/10/23/9bd617e0f3d1da76_6df3c05b0522faf7_61053163498187089674.jpg
+                    " alt="">
+                </a>
+                <div class="tray__item-description">
+                    <div class="tray__item-title">
+                        Kenja no Deshi wo Nanoru Kenja
+                    </div>
+                    <div class="tray__item-meta--info">
+                        <span class="tray__cartoon-views">3,705 lượt xem</span>
+                    </div>
+                </div>
+                <div class="tray__film-update">??? tập</div>
+                <div class="tray__item-play--button">
+                    <span class="material-icons-sharp" style="font-size:50px;line-height:68px">
+                        play_arrow
+                        </span>
+                </div>
+                <div class="tray__item-upcoming">Sắp chiếu</div>
+            </div>
+            <a href=""><span class="tray__more">Xem thêm</span></a>
         </section>
     </div>
+    <footer>
+        <div class="footer grid wide">
+
+            Xem <a href="">anime Vietsub online</a>, <a href="">phim Mỹ</a>, <a href="">phim Nhật Bản</a>, <a href="">phim Hàn Quốc</a>,
+            <a href="">phim Thái Lan</a>, và <a href="">phim Trung Quốc</a>. Đọc <a href="">báo thể thao</a>, <a href="">du lịch</a>, <a href="">giải trí</a>, <a href="">tin tức</a> <a href="">thời sự</a>, <a href="">thế giới</a> với các chuyên mục
+            <a href="">bóng đá</a>, <a href="">hậu trường</a>, <a href="">review phim</a>, các <a href="">điểm đến</a> hấp dẫn
+
+        </div>
+    </footer>
     <script src="assets/js/home.js"></script>
 </body>
 
